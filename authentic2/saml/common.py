@@ -395,7 +395,7 @@ def add_federation(user, login=None, name_id=None, provider_id=None):
             return None
         if not login.nameIdentifier:
             return None
-        if not login.nameIdentifier.content or not login.nameIdentifier.nameQualifier:
+        if not login.nameIdentifier.content:
             return None
         name_id=login.nameIdentifier
     fed = LibertyFederation()

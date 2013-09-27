@@ -99,8 +99,7 @@ class AuthSAML2PersistentBackend:
         '''Create a new user mapping to the given NameID'''
         if not name_id or \
                  name_id.format != \
-                 lasso.SAML2_NAME_IDENTIFIER_FORMAT_PERSISTENT or \
-                 not name_id.nameQualifier:
+                 lasso.SAML2_NAME_IDENTIFIER_FORMAT_PERSISTENT:
             raise ValueError('Invalid NameID')
         if not username:
             # FIXME: maybe keep more information in the forged username
